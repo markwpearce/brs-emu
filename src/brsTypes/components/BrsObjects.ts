@@ -7,6 +7,7 @@ import { RoRegex } from "./RoRegex";
 import { BrsString } from "../BrsType";
 import { RoString } from "./RoString";
 import { RoXMLElement } from "./RoXMLElement";
+import { RoXMLList } from "./RoXMLList";
 
 /** Map containing a list of brightscript components that can be created. */
 export const BrsObjects = new Map<string, Function>([
@@ -18,4 +19,5 @@ export const BrsObjects = new Map<string, Function>([
     ["roregex", (expression: BrsString, flags: BrsString) => new RoRegex(expression, flags)],
     ["rostring", (literal: BrsString) => new RoString(literal)],
     ["roxmlelement", () => new RoXMLElement()],
+    ["roxmllist", () => new RoXMLList()],
 ]);
